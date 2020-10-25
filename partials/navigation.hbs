@@ -1,0 +1,27 @@
+<ul class="navbar-nav mr-auto">
+    <!-- Loop through the navigation items -->
+    {{#foreach navigation}}
+    <li class="nav-item {{#if current}} active{{/if}}"><a href="{{url absolute="true"}}" class="nav-link">{{label}}</a></li>
+    {{/foreach}}
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Tips & Tricks
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="https://blog.thiefmd.com/getting-started-with-thiefmd/">Getting Started with ThiefMD</a>
+            <strong class="dropdown-header">Linux</strong>
+            <a class="dropdown-item" href="/tips/linux-writing-tools">Linux Writing Tools</a>
+            <strong class="dropdown-header">Novel Writing</strong>
+            <a class="dropdown-item" href="/tips/novel-writing">Novel Writing</a>
+            <a class="dropdown-item" href="/tips/searching-and-tags">Searching and Tags</a>
+            <strong class="dropdown-header">Blogging</strong>
+            <a class="dropdown-item" href="/tips/blogging-with-writefreely">Blogging with WriteFreely</a>
+            <a class="dropdown-item" href="/tips/blogging-with-ghost">Blogging with Ghost</a>
+            <a class="dropdown-item" href="/tips/jekyll">Blogging with Jekyll</a>
+            <strong class="dropdown-header">Customization</strong>
+            <a class="dropdown-item" href="/tips/export-styles">Export Styles</a>
+            <a class="dropdown-item" href="https://themes.thiefmd.com">ThiefMD Themes</a>
+        </div>
+    </li>
+    <!-- End the loop -->
+</ul>

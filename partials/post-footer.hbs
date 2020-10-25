@@ -1,20 +1,7 @@
-<div class="{{#if featured}}col-sm-12 {{else}}col-md-4{{/if}} mt-2 mb-2  d-flex align-items-stretch">
+<div class="col-md-4 mt-2 mb-2  d-flex align-items-stretch">
 <div class="card">
     <div class="thumbnail">
         {{#if feature_image}}
-        {{#if featured}}
-        <div class="thief-media-left mr-2">
-        <a href="{{url}}">
-            {{!-- This is a responsive image, it loads different sizes depending on device
-            https://medium.freecodecamp.org/a-guide-to-responsive-images-with-ready-to-use-templates-c400bd65c433 --}}
-            <img
-                loading="lazy"
-                src="{{img_url feature_image size="m"}}"
-                alt="{{title}}"
-            />
-        </a>
-        </div>
-        {{else}}
         <a href="{{url}}">
             {{!-- This is a responsive image, it loads different sizes depending on device
             https://medium.freecodecamp.org/a-guide-to-responsive-images-with-ready-to-use-templates-c400bd65c433 --}}
@@ -25,7 +12,6 @@
                 alt="{{title}}"
             />
         </a>
-        {{/if}}
         {{/if}}
         <div class="card-body">
             <h3 class="card-title"><a class="post-card-content-link" href="{{url}}">{{title}}</a></h3>

@@ -1,40 +1,19 @@
-<nav class="site-nav">
-    <div class="site-nav-left-wrapper">
-        <div class="site-nav-left">
-            {{#if @site.logo}}
-                <a class="site-nav-logo" href="{{@site.url}}"><img src="{{@site.logo}}" alt="{{@site.title}}" /></a>
-            {{else}}
-                <a class="site-nav-logo" href="{{@site.url}}">{{@site.title}}</a>
-            {{/if}}
-            <div class="site-nav-content">
-                {{#if @site.navigation}}
-                    {{navigation}}
-                {{/if}}
-                {{#is "post"}}
-                    <span class="nav-post-title {{#unless @site.logo}}dash{{/unless}}">{{post.title}}</span>
-                {{/is}}
-            </div>
-        </div>
-    </div>
-    <div class="site-nav-right">
-        {{#if @site.secondary_navigation}}
-            {{navigation type="secondary"}}
-        {{else}}
-            <div class="social-links">
-                {{#if @site.facebook}}
-                    <a class="social-link social-link-fb" href="{{facebook_url @site.facebook}}" title="Facebook" target="_blank" rel="noopener">{{> "icons/facebook"}}</a>
-                {{/if}}
-                {{#if @site.twitter}}
-                    <a class="social-link social-link-tw" href="{{twitter_url @site.twitter}}" title="Twitter" target="_blank" rel="noopener">{{> "icons/twitter"}}</a>
-                {{/if}}
-            </div>
-            {{#unless @labs.members}}
-                <a class="rss-button" href="https://feedly.com/i/subscription/feed/{{@site.url}}/rss/" title="RSS" target="_blank" rel="noopener">{{> "icons/rss"}}</a>
-            {{/unless}}
-        {{/if}}
+<a class="navbar-brand" href="{{@site.url}}">{{@site.title}}</a>
 
-        {{#if @labs.members}}
-            <a class="subscribe-button" href="#subscribe">Subscribe</a>
-        {{/if}}
-    </div>
-</nav>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#thief-menu" aria-controls="thief-menu" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="thief-menu">
+    {{#if @site.navigation}}
+        {{navigation}}
+    {{/if}}
+    {{!-- {{#is "post"}}
+        <span class="nav-post-title {{#unless @site.logo}}dash{{/unless}}">{{post.title}}</span>
+    {{/is}} --}}
+
+    <ul class="navbar-nav ml-auto social-links">
+        <li class="nav-item"><a href="https://github.com/kmwallio/ThiefMD" class="nav-link">GitHub</a></li>
+        <li class="nav-item"><a href="/download" class="nav-link">Download</a></li>
+    </ul>
+</div>
