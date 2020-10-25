@@ -36,4 +36,4 @@ This theme uses [bootstrap](https://getbootstrap.com/) and the [bootstrap cdn](h
 
 # Copyright & License
 
-Copyright (c) 2013-2020 Ghost Foundation - Released under the [MIT license](LICENSE).
+Built on Casper, Copyright (c) 2013-2020 Ghost Foundation - Released under the [MIT license](LICENSE).
